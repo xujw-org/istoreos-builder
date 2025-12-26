@@ -94,8 +94,8 @@ export OPKG_KEYS:=$(TOPDIR)/keys
 OPKG:=$(call opkg,$(TARGET_DIR)) \
 	-f $(TOPDIR)/repositories.conf \
 	--verify-program $(SCRIPT_DIR)/opkg-key \
-	--cache $(DL_DIR) \
-	--lists-dir $(LISTS_DIR)
+	--lists-dir $(LISTS_DIR) #--cache-dir $(DL_DIR) here remove 
+
 
 export APK_KEYS:=$(TOPDIR)/keys
 APK:=$(call apk,$(TARGET_DIR)) \
